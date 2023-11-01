@@ -6,10 +6,44 @@ import image from '@/public/assets/images/image1.jpg';
 import imag2 from '@/public/assets/images/image2.jpg';
 import imag3 from '@/public/assets/images/image3.jpg';
 import imag4 from '@/public/assets/images/image4.jpg';
+import imag5 from '@/public/assets/images/image5.jpg';
+
 
 const ImageSlider = () => {
 
-    const [positonIndex, setPositonIndex] = useState([0, 1, 2, 3, 4]);
+    const [positonIndexs, setPositonIndexs] = useState([0, 1, 2, 3, 4]);
+
+
+    const handelNext = () => {
+        setPositonIndexs((preIndex) => {
+            const updatedIndex = preIndex.map((preIndex) => (preIndex +1) % 5);
+            return updatedIndex;
+        });
+    } 
+
+    const images = [
+        image,
+        imag2,
+        imag3,
+        imag4,
+        imag5
+    ]
+
+    const positions = [
+        'center',
+        'left1',
+        'left',
+        'right',
+        'right1',
+    ]
+
+    const imageVarience = {
+        center: {x: '0%', scale: 1, zIndex: 5},
+        left1: {x: '-50%', scale: 0.7, zIndex: 2},
+        left: {x: '-90%', scale: 0.5, zIndex: 1},
+        right: {x: '90%', scale: 0.5, zIndex: 1},
+        right1: {x: '50%', scale: 0.7, zIndex: 2},
+    }
 
   return (
     <div></div>
