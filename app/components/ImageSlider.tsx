@@ -62,7 +62,7 @@ const ImageSlider = () => {
             style={{width: '40%', position: 'absolute'}}
             />
         ))}
-        <button className='text-black rounded-lg py-2 px-4 mt-[200px] md:mt-[500px] bg-[#183D3D]' onClick={handelNext}>Next</button>
+        <button className='text-black rounded-lg py-2 px-4 mt-[200px] md:mt-[600px] bg-[#183D3D]' onClick={handelNext}>Next</button>
     </div>
     
   )
