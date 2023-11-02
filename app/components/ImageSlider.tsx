@@ -48,7 +48,7 @@ const ImageSlider = () => {
     }
 
   return (
-    <div className='flex flex-col items-center justify-start h-full w-full'>
+    <div className='flex flex-col items-center justify-center h-full w-full'>
         {images.map((image, index) =>(
             <motion.img
             key={index}
@@ -62,7 +62,7 @@ const ImageSlider = () => {
             style={{width: '40%', position: 'absolute'}}
             />
         ))}
-        <button className='text-black rounded-lg py-2 px-4 mt-[500px] bg-[#183D3D]' onClick={handelNext}>Next</button>
+        <button className='text-black rounded-lg py-2 px-4 mt-[200px] md:mt-[500px] bg-[#183D3D]' onClick={handelNext}>Next</button>
     </div>
     
   )
